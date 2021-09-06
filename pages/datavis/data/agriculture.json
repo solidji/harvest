@@ -1,0 +1,538 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "name": "梅子",
+      "value": "千禾",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "1",
+      "name": "渡渡鸟",
+      "value": "千禾",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "2",
+      "name": "李嘉敏",
+      "value": "宜居广州｜可持续垃圾管理",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "3",
+      "name": "阿朱",
+      "value": "千禾",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "4",
+      "name": "芋荷",
+      "value": "芋荷｜Lina｜有邻共享家｜黎娜",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "5",
+      "name": "芹菜",
+      "value": "芹菜｜星空花园｜华师",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "6",
+      "name": "林洁",
+      "value": "林洁｜旗溪农场",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "7",
+      "name": "雪姬",
+      "value": "雪姬｜自然教育(NGO)｜清远",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "8",
+      "name": "陈毅",
+      "value": "陈毅｜惠州叁物园｜一方乐田",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "9",
+      "name": "李林甫",
+      "value": "李林甫｜半农半X｜一方乐田",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "10",
+      "name": "李自若",
+      "value": "李自若|秾可食地景|华南农大",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "11",
+      "name": "马淑玲",
+      "value": "马淑玲｜穆火｜黄埔黄麻村",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "12",
+      "name": "林家钰",
+      "value": "林家钰｜丰年庆｜深井村｜绿耕",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "13",
+      "name": "一笑",
+      "value": "岭南基金会｜城乡汇｜一笑",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "14",
+      "name": "小蟹",
+      "value": "PCD社区伙伴｜谢晓玲",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "15",
+      "name": "杨国星",
+      "value": "仙娘溪｜杨国星｜汇耕田",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "16",
+      "name": "扎西卓玛",
+      "value": "扎西卓玛｜善农汇｜高明更合镇农场｜鹏鹄农业",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "17",
+      "name": "王娟",
+      "value": "王娟｜沃土工坊",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "18",
+      "name": "李万硕",
+      "value": "李万硕｜Leon｜典辰农业",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "19",
+      "name": "黄义",
+      "value": "黄义|广东省岭南教育慈善基金会|城乡汇|春田计划",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "20",
+      "name": "Sandy",
+      "value": "Sandy-敏圆|城乡汇",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "21",
+      "name": "贾蔚",
+      "value": "贾老师@贾蔚|807创新空间｜中大",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "22",
+      "name": "黄志勇",
+      "value": "学委阿勇|丹姿基金会|广州",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "23",
+      "name": "钟淑如",
+      "value": "钟淑如｜皮蛋｜中大社会学｜丰年庆",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "24",
+      "name": "陈嘉华",
+      "value": "陈嘉华｜PDT食物小站",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "25",
+      "name": "甘宁",
+      "value": "甘宁｜三粒豆｜华德福",
+      "symbolSize": 20,
+      "category": 0
+    },
+    {
+      "id": "1000",
+      "name": "千禾",
+      "value": "千禾基金会",
+      "symbolSize": 30,
+      "category": 1
+    },
+    {
+      "id": "1001",
+      "name": "社区伙伴PCD",
+      "value": "社区伙伴PCD",
+      "symbolSize": 30,
+      "category": 1
+    },
+    {
+      "id": "1002",
+      "name": "岭南基金会",
+      "value": "广东省岭南教育慈善基金会",
+      "symbolSize": 30,
+      "category": 1
+    },
+    {
+      "id": "1003",
+      "name": "绿耕",
+      "value": "绿耕城乡互助社",
+      "symbolSize": 30,
+      "category": 1
+    },
+    {
+      "id": "1004",
+      "name": "善农汇",
+      "value": "广东省善农汇社会生态农业（CSA）专业合作社",
+      "symbolSize": 30,
+      "category": 1
+    },
+    {
+      "id": "1005",
+      "name": "丹姿基金会",
+      "value": "广东省丹姿基金会",
+      "symbolSize": 30,
+      "category": 1
+    },
+    {
+      "id": "1100",
+      "name": "一方乐田",
+      "value": "一方乐田",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1101",
+      "name": "耕读心园",
+      "value": "耕读心园｜中山",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1102",
+      "name": "旗溪农场",
+      "value": "旗溪农场｜中山",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1103",
+      "name": "慧灵农场",
+      "value": "慧灵农场｜广州",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1104",
+      "name": "新新木塱农场",
+      "value": "新新木塱农场｜广州",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1105",
+      "name": "银林生态农场",
+      "value": "银林生态农场｜从化｜郭锐",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1106",
+      "name": "绿手指农场",
+      "value": "银林生态农场｜珠海",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1107",
+      "name": "秾可食地景",
+      "value": "秾可食地景天台花园｜广州｜华农",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1108",
+      "name": "星空花园",
+      "value": "星空花园｜广州｜华师",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1109",
+      "name": "懒人菜园",
+      "value": "懒人菜园｜广州｜Helen",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1110",
+      "name": "堆肥花园",
+      "value": "堆肥花园｜深圳｜斐然",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1111",
+      "name": "一亩良田亲子园",
+      "value": "一亩良田亲子园｜东莞",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1112",
+      "name": "高明更合镇农场",
+      "value": "高明更合镇农场",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1113",
+      "name": "鹏鹄农业",
+      "value": "鹏鹄农业",
+      "symbolSize": 30,
+      "category": 2
+    },
+    {
+      "id": "1200",
+      "name": "深井村",
+      "value": "深井村｜广州",
+      "symbolSize": 30,
+      "category": 3
+    },
+    {
+      "id": "1201",
+      "name": "仙娘溪",
+      "value": "仙娘溪｜从化",
+      "symbolSize": 30,
+      "category": 3
+    },
+    {
+      "id": "1202",
+      "name": "乐明村",
+      "value": "乐明村｜从化",
+      "symbolSize": 30,
+      "category": 3
+    },
+    {
+      "id": "1203",
+      "name": "宣星村",
+      "value": "宣星村｜从化",
+      "symbolSize": 30,
+      "category": 3
+    },
+    {
+      "id": "1300",
+      "name": "穆火自然教育",
+      "value": "穆火自然教育基地",
+      "symbolSize": 30,
+      "category": 4
+    },
+    {
+      "id": "1400",
+      "name": "丰年庆",
+      "value": "丰年庆",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1401",
+      "name": "城乡汇",
+      "value": "城乡汇",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1403",
+      "name": "寻常生活+",
+      "value": "寻常生活+",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1404",
+      "name": "宜居广州",
+      "value": "宜居广州",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1405",
+      "name": "有邻共享家",
+      "value": "有邻共享家州",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1406",
+      "name": "春田计划",
+      "value": "春田计划",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1407",
+      "name": "叠家",
+      "value": "叠家周末自然学校",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1408",
+      "name": "807创新空间",
+      "value": "807创新空间",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1409",
+      "name": "PDT食物小站",
+      "value": "PDT食物小站",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1410",
+      "name": "三粒豆",
+      "value": "三粒豆亲子工作室",
+      "symbolSize": 30,
+      "category": 5
+    },
+    {
+      "id": "1500",
+      "name": "月食录",
+      "value": "月食录",
+      "symbolSize": 30,
+      "category": 6
+    },
+    {
+      "id": "1600",
+      "name": "惠州叁物园",
+      "value": "惠州叁物园",
+      "symbolSize": 30,
+      "category": 7
+    },
+    {
+      "id": "1601",
+      "name": "典辰农业",
+      "value": "典辰农业",
+      "symbolSize": 30,
+      "category": 7
+    },
+    {
+      "id": "1602",
+      "name": "沃土工坊",
+      "value": "沃土工坊",
+      "symbolSize": 30,
+      "category": 7
+    }
+  ],
+  "links": [
+    { "source": "0", "target": "1000" },
+    { "source": "0", "target": "1300" },
+    { "source": "0", "target": "1407" },
+    { "source": "1", "target": "1000" },
+    { "source": "1", "target": "1407" },
+    { "source": "2", "target": "1404" },
+    { "source": "3", "target": "1000" },
+    { "source": "3", "target": "1400" },
+    { "source": "3", "target": "1500" },
+    { "source": "4", "target": "1405" },
+    { "source": "5", "target": "1108" },
+    { "source": "5", "target": "1406" },
+    { "source": "6", "target": "1101" },
+    { "source": "6", "target": "1102" },
+    { "source": "7", "target": "1408" },
+    { "source": "8", "target": "1100" },
+    { "source": "8", "target": "1600" },
+    { "source": "9", "target": "1100" },
+    { "source": "10", "target": "1107" },
+    { "source": "11", "target": "1300" },
+    { "source": "12", "target": "1001" },
+    { "source": "12", "target": "1400" },
+    { "source": "12", "target": "1003" },
+    { "source": "12", "target": "1200" },
+    { "source": "13", "target": "1002" },
+    { "source": "13", "target": "1401" },
+    { "source": "14", "target": "1001" },
+    { "source": "15", "target": "1201" },
+    { "source": "16", "target": "1112" },
+    { "source": "16", "target": "1113" },
+    { "source": "16", "target": "1004" },
+    { "source": "17", "target": "1602" },
+    { "source": "18", "target": "1601" },
+    { "source": "19", "target": "1406" },
+    { "source": "19", "target": "1401" },
+    { "source": "19", "target": "1002" },
+    { "source": "20", "target": "1401" },
+    { "source": "21", "target": "1408" },
+    { "source": "22", "target": "1005" },
+    { "source": "23", "target": "1400" },
+    { "source": "24", "target": "1409" },
+    { "source": "25", "target": "1410" },
+    { "source": "1000", "target": "1406" },
+    { "source": "1000", "target": "1401" },
+    { "source": "1000", "target": "1400" },
+    { "source": "1003", "target": "1401" },
+    { "source": "1003", "target": "1201" },
+    { "source": "1105", "target": "1403" },
+    { "source": "1201", "target": "1202" },
+    { "source": "1203", "target": "1407" },
+    { "source": "1602", "target": "1401" }
+  ],
+  "categories": [
+    {
+      "name": "个人协作"
+    },
+    {
+      "name": "公益机构"
+    },
+    {
+      "name": "生态农场"
+    },
+    {
+      "name": "村庄村寨"
+    },
+    {
+      "name": "教育空间"
+    },
+    {
+      "name": "社群社区"
+    },
+    {
+      "name": "内容媒体"
+    },
+    {
+      "name": "社会企业"
+    }
+  ]
+}

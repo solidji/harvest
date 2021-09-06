@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hero {
+    @apply w-full text-[#333];
+  }
+}
+
+.title {
+  @apply w-full pt-20 m-0;
+  font-size: 48px;
+}
+
+.title,
+.description {
+  @apply text-center;
+}
+
+.btn {
+  @apply px-4 py-2 font-bold rounded;
+}
+.btn-blue {
+  @apply text-white bg-blue-500;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
+
+.card {
+  @apply overflow-hidden rounded shadow-lg;
+}
+
+a {
+  @apply text-blue-600 underline hover:text-blue-800 visited:text-purple-600;
+}
+
+ul {
+  @apply list-disc;
+}
+
+pre {
+  @apply p-3 text-center bg-gray-300 rounded;
+}
+
+code {
+  @apply font-mono text-sm;
+}
+
+p {
+  @apply text-xl text-center;
+}
