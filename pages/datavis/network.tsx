@@ -25,7 +25,7 @@ type ECOption = echarts.ComposeOption<
   | GraphSeriesOption
 >
 
-const myecharts = ({graph}: any) => {
+const network = ({graph}: any) => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [type, setType] = useState<"circular" | "none" | "force" | undefined>("circular")
@@ -76,7 +76,7 @@ const myecharts = ({graph}: any) => {
     legend: [{
         // orient: 'vertical',
         bottom: 16,
-        data: graph?.categories?.map((a) => {
+        data: graph?.categories?.map((a:any) => {
             return a.name;
         })
     }],
@@ -336,4 +336,4 @@ export async function getStaticProps() {
   }
 }
 
-export default myecharts
+export default network
