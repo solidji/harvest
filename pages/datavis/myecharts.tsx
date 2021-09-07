@@ -1,27 +1,19 @@
-// import type { NextPage } from 'next'
 import * as _ from "lodash"
 import { useState } from 'react'
 
 import * as echarts from 'echarts/core';
 import {
-  BarChart,
   // 系列类型的定义后缀都为 SeriesOption
   BarSeriesOption,
   GraphSeriesOption,
-  LineChart,
   LineSeriesOption
 } from 'echarts/charts';
 import {
-  TitleComponent,
   // 组件类型的定义后缀都为 ComponentOption
   TitleComponentOption,
-  GridComponent,
   GridComponentOption,
-  TooltipComponent
 } from 'echarts/components';
-import { CanvasRenderer, SVGRenderer } from 'echarts/renderers';
 import ReactECharts from 'echarts-for-react';
-// import data from './data/les-miserables.json'
 import data from './data/agriculture.json'
 
 // 通过 ComposeOption 来组合出一个只有必须组件和图表的 Option 类型
@@ -31,55 +23,59 @@ type ECOption = echarts.ComposeOption<
   | TitleComponentOption
   | GridComponentOption
   | GraphSeriesOption
->;
-
-// var option: ECOption = {
-//   title: {
-//     text: 'ECharts 入门示例'
-//   },
-//   tooltip: {},
-//   xAxis: {
-//     data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-//   },
-//   yAxis: {},
-//   series: [
-//     {
-//       name: '销量',
-//       type: 'bar',
-//       data: [5, 20, 36, 10, 10, 20]
-//     }
-//   ]
-// };
-
+>
 
 const myecharts = ({graph}: any) => {
 
-  // const [option, setOption] = useState()
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [type, setType] = useState<"circular" | "none" | "force" | undefined>("circular")
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [order, setOrder] = useState<boolean | undefined>(true)
 
-  graph?.nodes?.forEach((node: { label: { show: boolean; }; symbolSize: number; }) => {
+  graph?.nodes?.forEach((node: { label: { show: boolean; }, id: string, symbolSize: number; }) => {
     // node.symbolSize = 5;
+    const r = _.filter(graph?.links, (l) => {
+      return node.id === l.source || node.id === l.target 
+    })
+    node.symbolSize = (r.length+3)*5
     node.label = {
-        show: node.symbolSize > 10
+        show: node.symbolSize > 15
     }})
-  // console.log("🚀 ~ file: myecharts.tsx ~ line 78 ~ useEffect ~ graph", graph)
-  
+
+  const nodesSmall = _.cloneDeep(graph?.nodes)
+  nodesSmall?.forEach((node: { label: { show: boolean; }, id: string, symbolSize: number; }) => {
+    const r = _.filter(graph?.links, (l) => {
+      return node.id === l.source || node.id === l.target 
+    })
+    node.symbolSize = (r.length+2)*3
+    node.label = {
+        show: node.symbolSize > 9
+    }})
+
   // 给定一个已有的“数据集”（dataset）和一个“转换方法”（transform），echarts 能生成一个新的“数据集”
   // 如：数据过滤（filter）、排序（sort）、聚合（aggregate）、直方图（histogram）、简单聚类（clustering）、回归线计算（regression）等。
   const option:ECOption = {
     title: {
-        text: '广州周边生态种植数字维基P1\n',
-        subtext: '(P1-关系图、P2-地理图、P3-内容聚合、P4-农产时节、P5-课程活动)\n\n',
-        // top: 'bottom',
-        left: 'center'
+        text: '广州周边生态种植数字地图P1\n',
+        subtext: '(施工中：P1-关系图、P2-地理图、P3-内容聚合、P4-农产时节、P5-课程活动)\n\n',
+        left: 'center',
+        subtextStyle: {
+          color: 'blue',
+          overflow: 'break',
+          width: 350
+        }
     },
-    tooltip: {},
+    tooltip: {
+      confine: true,
+      // position: ['50%', '50%'],
+      textStyle: {
+        overflow: 'breakAll',
+        // width: 100
+      }
+    },
     legend: [{
         // orient: 'vertical',
-        // left: 'right',
-        top: 'bottom',
-        // selectedMode: 'single',
+        bottom: 16,
         data: graph?.categories?.map((a) => {
             return a.name;
         })
@@ -88,21 +84,28 @@ const myecharts = ({graph}: any) => {
     animationEasingUpdate: 'quinticInOut',
     toolbox: {
       show: true,
+      bottom: 64,
+      left: 'center',
+      itemSize: 30,
+      itemGap: 20,
       feature: {
-          // dataZoom: {
-          //     yAxisIndex: 'none'
-          // },
-          // dataView: {readOnly: false},
-          // magicType: {type: ['graph', 'bar', 'line']},
           myTool1: {
             show: true,
             title: '切换视图',
-            icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
+            icon: 'image:///switch.svg',
             onclick: ( m, c )=>{
                 if(type === 'circular')
                   setType("force")
                 else
                   setType("circular")
+            }
+        },
+        myTool2: {
+            show: true,
+            title: '切换排序',
+            icon: 'image:///sort.svg',
+            onclick: ( m, c )=>{
+                setOrder(!order)
             }
         },
           restore: {},
@@ -115,10 +118,14 @@ const myecharts = ({graph}: any) => {
             type: 'graph',
             layout: type,
             legendHoverLink: false,
-            data: _.shuffle(graph?.nodes),
+            left: 'center',
+            top: 'center',
+            width: '85%',
+            height: '85%',
+            data: order ? _.shuffle(nodesSmall): nodesSmall,
             links: graph?.links,
             categories: graph?.categories,
-            roam: 'scale',
+            // roam: true,
             label: {
                 position: 'right',
                 formatter: '{b}'
@@ -144,8 +151,6 @@ const myecharts = ({graph}: any) => {
                 width: 10
               },
               itemStyle: {
-                // 高亮时点的颜色。
-                // color: 'blue',
                 shadowBlur: 10,
                 shadowOffsetX: 0,
                 shadowColor: 'rgba(0, 0, 0, 0.5)'
@@ -161,9 +166,9 @@ const myecharts = ({graph}: any) => {
               edgeLength: 30,
               gravity: 0.1
             },
+            draggable: true,
             // 动画效果，支持标签数值文本的插值动画，图形的形变（morph）、分裂（separate）、合并（combine）等效果的过渡动画。
             // animation: false,
-            draggable: true,
             // 为所有系列还添加了点击选中这个之前只有在饼图、地图等少数系列中才能开启的交互
             // 开发者可以设置为单选或多选模式，并且通过监听 selectchanged 事件获取到选中的所有图形然后进行更进一步的处理。
             // 与高亮和淡出一样，选中的样式也可以在 select 中配置。
@@ -174,32 +179,155 @@ const myecharts = ({graph}: any) => {
               // lineStyle?: LineStyleOption<...> | undefined;
             // }
         }
-    ]
+    ],
+    media: [
+      // 这里定义了 media query 的逐条规则。
+      {
+        query: {
+          minWidth: 660, // 768 iPhone6 iPhoneX横
+          // maxHeight: 300,
+          minAspectRatio: 1.3 // 长宽比大于1.3时，横屏
+        },
+        option: {
+          title: {
+            left: 32,
+            top: 16,
+            subtextStyle: {
+              color: 'red',
+              overflow: 'break',
+              width: 150
+            },
+          },
+          toolbox: {
+            show: true,
+            orient: 'vertical',
+            bottom: 'center',
+            right: 32,
+            itemSize: 20,
+            itemGap: 20
+          },
+          legend: {
+            orient: 'vertical',
+            bottom: 64,
+            left: 32
+          },
+          series: [
+            {
+              left: 'center',
+              top: 'center',
+              width: '85%',
+              height: '85%',
+            }
+          ]
+        }
+      },
+      {
+        query: {
+          minWidth: 700, // 1024 iPad竖
+          // maxHeight: 300,
+          maxAspectRatio: 1.3 // 长宽比小于1.3时，竖屏
+        },
+        option: {
+          title: {
+            top: 32,
+            left: 'center',
+            subtextStyle: {
+              color: 'green',
+              overflow: 'break',
+              width: 900
+            },
+          },
+          toolbox: {
+            show: true,
+            orient: 'horizontal',
+            top: '10%',
+            right: 32,
+            itemSize: 25,
+            itemGap: 20
+          },
+          legend: {
+            orient: 'horizontal',
+            bottom: 80,
+            left: 'center'
+          },
+          series: [
+            {
+              left: 'center',
+              top: 'center',
+              width: '85%',
+              height: '85%',
+              roam: true,
+              data: order ? _.shuffle(graph?.nodes): graph?.nodes,
+            }
+          ]
+        }
+      },
+      {
+        query: {
+          minWidth: 1024, // 1024 iPad横 iPad Pro - PC
+          // maxHeight: 300,
+          // minAspectRatio: 1.3 // 默认横屏
+        },
+        option: {
+          title: {
+            top: 32,
+            left: 'center',
+            subtextStyle: {
+              color: 'purple',
+              overflow: 'break',
+              width: 900
+            },
+          },
+          toolbox: {
+            show: true,
+            orient: 'vertical',
+            top: 64,
+            right: 64,
+            itemSize: 30,
+            itemGap: 20
+          },
+          legend: {
+            orient: 'vertical',
+            top: 64,
+            left: 64
+          },
+          series: [
+            {
+              left: 'center',
+              top: 'center',
+              // width: '85%',
+              height: '70%',
+              roam: true,
+              data: order ? _.shuffle(graph?.nodes): graph?.nodes,
+            }
+          ]
+        }
+      }]
   } 
 
   return (
-    <div className="w-screen h-screen p-8 m-auto bg-gray-200">
-      <ReactECharts
-        // style={{width:960, height:600}}
-        option={option}
-        notMerge={true}
-        lazyUpdate={true}
-        // theme={"theme_name"}
-        // onChartReady={this.onChartReadyCallback}
-        // onEvents={EventsDict}
-        opts={{renderer: 'svg', width:'auto', height: 1024}}
-        />
+    <div className="w-screen h-screen bg-white ">
+      <div id="main" className="w-auto h-full p-0 pt-4 pb-16 m-auto sm:p-0">
+        <ReactECharts
+          // style={{width:"100%", height:"80%", padding:'0px', margin: 0}}
+          style={{width:"100%", height:"100%", padding:'0px', margin: 0}}
+          // className={"w-auto p-0 pt-4 md:p-8"}
+          option={option}
+          notMerge={true}
+          lazyUpdate={true}
+          // theme={"theme_name"}
+          // onChartReady={this.onChartReadyCallback}
+          // onEvents={EventsDict}
+          opts={{renderer: 'svg'}}
+          />
+      </div>
     </div>
   )
 }
 
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts
   // const res = await fetch('https://.../posts')
   // const posts = await res.json()
-
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
   const graph = data
   return {
     props: {
