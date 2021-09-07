@@ -93,7 +93,7 @@ const network = ({graph}: any) => {
             show: true,
             title: '切换视图',
             icon: 'image:///switch.svg',
-            onclick: ( m, c )=>{
+            onclick: ()=>{
                 if(type === 'circular')
                   setType("force")
                 else
@@ -104,7 +104,7 @@ const network = ({graph}: any) => {
             show: true,
             title: '切换排序',
             icon: 'image:///sort.svg',
-            onclick: ( m, c )=>{
+            onclick: ()=>{
                 setOrder(!order)
             }
         },
