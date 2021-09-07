@@ -60,7 +60,6 @@ const network = ({graph}: any) => {
         subtext: '(施工中：P1-关系图、P2-地理图、P3-内容聚合、P4-农产时节、P5-课程活动)\n\n',
         left: 'center',
         subtextStyle: {
-          color: 'blue',
           overflow: 'break',
           width: 350
         }
@@ -193,7 +192,6 @@ const network = ({graph}: any) => {
             left: 32,
             top: 16,
             subtextStyle: {
-              color: 'red',
               overflow: 'break',
               width: 150
             },
@@ -232,7 +230,6 @@ const network = ({graph}: any) => {
             top: 32,
             left: 'center',
             subtextStyle: {
-              color: 'green',
               overflow: 'break',
               width: 900
             },
@@ -273,7 +270,6 @@ const network = ({graph}: any) => {
             top: 32,
             left: 'center',
             subtextStyle: {
-              color: 'purple',
               overflow: 'break',
               width: 900
             },
